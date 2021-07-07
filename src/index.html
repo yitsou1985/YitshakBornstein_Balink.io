@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Yits</title>
+    <link rel="stylesheet" href="style.css">
+
+  
+    
+    <style>
+        body {
+            background-image: url();
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="grid-container">
+        <header>
+            <div><h1 class="Show">Show Weather</h1></header></div>
+        
+        <div class="center">
+            <div class="col-md-4">
+                <select class="mdb-select" id="cityList">
+                    <option value="0" selected>View Weather City</option>
+                </select>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-10 align-left">
+               <p id="DisplayCity"></p> 
+            </div>
+            <div class="col-md-2 ">
+                <p class="align-right">
+                    <dl>
+                        <div class="row">
+                        <b><ul class= "ul">Time</ul></b> 
+                            <li id="time"></li>
+                        </div>
+                        <div class="row">
+                           <b><ul>Sunrise</ul></b> 
+                            <li id="sunRiseTime"></li>
+                        </div>
+                        <div class="row">
+                           <b><ul>Sunset</ul></b>
+                            <li id="sunSetTime"></li>
+                        </div>
+                    </dl>
+                </p>
+            </div>
+        </div>
+    <img class="imag"  hidden id="loadingGif" src="../loadingGif.webp" alt="loading">
+    
+    <div id="weatherContent"></div>
+    
+</div>
+
+
+<script src="myCode.js"></script>
+<script src="dayScript.js" ></script>
+<script src="DayPage.html" ></script>
+
+
+</body>
+</html>

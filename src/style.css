@@ -1,0 +1,27 @@
+body{
+ background-color: linen;
+}
+.center{
+    text-align: center;
+}
+#DisplayCity,.col-md-2{
+text-align: center;
+display:flex;
+justify-content: space-between;
+
+align-items: center;
+padding: 0.5rem;
+}
+.Show{
+   
+    text-align: center;
+   color:blue;
+}
+.mdb-select{
+    font: 1rem helvetica;
+    padding: 1rem;
+    border: 0.1rem #808080 solid;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: #f0c040;
+}
