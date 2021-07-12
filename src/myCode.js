@@ -79,7 +79,7 @@ let weather = (function(){
 
         //Create the city name + state
         myFunctions.buildWeatherAreaName = function (data, WeatherNameData){
-            WeatherNameData.innerHTML = "<h1><b>" + data.title + " , " + data.parent.title + "</b></h1>";
+            WeatherNameData.innerHTML = "<h1 id='payscss' ><b id='ville' >" + data.title + " , " + data.parent.title + "</b></h1>";
         }
 
         /*here i'll create the 5-days weather forecast.
@@ -88,24 +88,27 @@ let weather = (function(){
           next, i'll get the data of that day from getDayData function
           At last, i'll put the dataHTML in the innerHTML.
         */
-        myFunctions.buildWeatherForecast = function (data, weather){
+       myFunctions.buildWeatherForecast = function (data, weather){
+           
             let dataHTML = "<div class=\"row\">";
             let day = 0;
             for(let i in data.consolidated_weather){
-                dataHTML += "<div class=\"col-md-2\">" +
+                dataHTML += "<div id='md2' class=\"col-md-2\">" +
                     "<form class=\"form\" action=\"DayPage.html\">\n" +
                     "  <input name=\"Day\" type=\"hidden\" value="+day +" '' >\n" +
                     "  <input name=\"City\" type=\"hidden\" value="+data.woeid +" '' >\n" +
-                    "  <input type=\"submit\" value=" + data.consolidated_weather[i].applicable_date + ">\n" +
+                    "  <input id='date' type=\"submit\"  value=" + data.consolidated_weather[i].applicable_date + ">\n" +
                     "</form>" +
                     "<br>";
                 dataHTML += myFunctions.getDayData(data.consolidated_weather[i]);
                 day++;
+                
             }
-
+                      
             dataHTML += "</div>";
 
             weather.innerHTML = dataHTML;
+            
         }
 
         /* This func would create all needed data for each day.
@@ -121,10 +124,10 @@ let weather = (function(){
             "<b>Max:</b>" +parseInt(data.max_temp) + "°C" + "<br>" +
             "<b>Min:</b>" +parseInt(data.min_temp) + "°C" +"<br>" +
             parseInt(data.wind_speed) + "mph" +"<br>" +"<br>" +
-            "<dt>Humidity</dt><dd>" +data.humidity + "%</dd>" +
-            "<dt>Visibility</dt><dd>" +(data.visibility).toFixed(2) + " miles</dd>" +
-            "<dt>Pressure</dt><dd>" +data.air_pressure + "mb</dd>" +
-            "<dt>Confidence</dt><dd>" +data.predictability + "%</dd>" +
+            "<p>Humidity</p><p>"   +data.humidity       + "%</p>" +
+            "<p>Visibility</p><p>" +(data.visibility).toFixed(2) + " miles</p>" +
+            "<p>Pressure</p><p>"   +data.air_pressure   + "mb</p>" +
+            "<p>Confidence</p><p>" +data.predictability + "%</p>" +
             "<br>" + "</div>";
             return tempString;
         }

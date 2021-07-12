@@ -9,14 +9,23 @@ text-align: center;
 display:flex;
 justify-content: space-between;
 
+
 align-items: center;
 padding: 0.5rem;
 }
-.Show{
-   
+
+.Show,#payscss{
+    margin: auto;
+    max-width: 300px;
+    margin-top: 40px;
     text-align: center;
+    justify-content: center;
+   
    color:blue;
+   border-radius: 0.5rem;
 }
+
+
 .mdb-select{
     font: 1rem helvetica;
     padding: 1rem;
@@ -24,4 +33,32 @@ padding: 0.5rem;
     border-radius: 0.5rem;
     cursor: pointer;
     background-color: #f0c040;
+}
+#date{
+    font: 1rem helvetica;
+    padding: 1rem;
+    border: 0.1rem #808080 solid;
+    border-radius: 0.5rem;
+    background-color: #f0c040;
+    /* background-color: aqua; */
+    cursor: pointer;
+}
+
+#md2{
+    margin: auto;
+    background-color: azure;
+    padding: 1rem;
+    justify-content: space-between;
+}
+#time,#sunRiseTime,#sunSetTime{
+    margin: auto;
+    padding: 1rem;
+    background-color: azure
+}
+#ul{
+    margin: auto;
+    font: 1rem helvetica;
+    
+    padding: 1rem;
+   
 }

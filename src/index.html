@@ -28,38 +28,46 @@
             
         </div>
         <div class="row">
-            <div class="col-md-10 align-left">
+            <div class="h1">
                <p id="DisplayCity"></p> 
             </div>
-            <div class="col-md-2 ">
+            <div id="id1" class="col-md-2 ">
                 <p class="align-right">
                     <dl>
                         <div class="row">
-                        <b><ul class= "ul">Time</ul></b> 
+                        <b><ul id='ul' class= "ul">Time ⌚</ul></b> 
                             <li id="time"></li>
                         </div>
                         <div class="row">
-                           <b><ul>Sunrise</ul></b> 
+                           <b><ul id='ul' >Sunrise🌅</ul></b> 
                             <li id="sunRiseTime"></li>
                         </div>
                         <div class="row">
-                           <b><ul>Sunset</ul></b>
+                           <b><ul id='ul' >Sunset 🌇</ul></b>
                             <li id="sunSetTime"></li>
                         </div>
                     </dl>
                 </p>
             </div>
         </div>
+  
     <img class="imag"  hidden id="loadingGif" src="../loadingGif.webp" alt="loading">
-    
+
     <div id="weatherContent"></div>
-    
+
 </div>
 
 
 <script src="myCode.js"></script>
 <script src="dayScript.js" ></script>
 <script src="DayPage.html" ></script>
+
+<script>
+   
+    document.getElementsByClassName("form")[0].City.value
+    document.getElementById('date').value
+    document.getElementById('ville')
+</script>
 
 
 </body>
