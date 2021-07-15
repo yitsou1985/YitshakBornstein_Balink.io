@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" type="text/javascript">
 <head>
     <meta charset="UTF-8">
     <title>Weather Yits</title>
@@ -21,8 +21,8 @@
         
         <div class="center">
             <div class="col-md-4">
-                <select class="mdb-select" id="cityList">
-                    <option value="0" selected>View Weather City</option>
+                <select  onchange=getSelectValue() class="mdb-select" id="cityList">
+                    <option  value="0" selected>View Weather City</option>
                 </select>
             </div>
             
@@ -51,9 +51,10 @@
             </div>
         </div>
   
-    <img class="imag"  hidden id="loadingGif" src="../loadingGif.webp" alt="loading">
+    <img class="imag"  hidden id="loadingGif" src="../loadingGif.webp" alt="loading"/>
 
     <div id="weatherContent"></div>
+    
 
 </div>
 
@@ -62,11 +63,22 @@
 <script src="dayScript.js" ></script>
 <script src="DayPage.html" ></script>
 
+<script src="storage.js"></script>
+
 <script>
    
-    document.getElementsByClassName("form")[0].City.value
-    document.getElementById('date').value
-    document.getElementById('ville')
+    // document.getElementsByClassName("form")[0].City.value
+    // const date=document.getElementById('date').value
+    // const ville =document.getElementById('ville')
+    //  console.log(ville)
+     
+
+ 
+    //everything is fully loaded, don't use me if you can use DOMContentLoaded
+
+
+
+
 </script>
 
 

@@ -18,14 +18,20 @@
         
         <h2><a href="index.html">Back</a></h2>
         <div id="dayContent"> </div>
-        <p type="text" id="para" class="col-md-2" value="" > </p>
+        <h1 type="text" id="para" class="col-md-2" value="" > </h1>
     </div>
     
-    <script src="dayScript.js">
-        <script src="index.html" ></script>
+    <!-- <script src="dayScript.js"></script> -->
+    <script src="index.html" ></script>
+    <script src="storage.js" ></script>
+ 
 
-
-
+    <script>
+         let select = document.getElementById('cityList') ;
+const localstor =localStorage.getItem('meteo','value') 
+    
+ console.log (localstor)
+document.getElementById("para").innerHTML= localstor
 
     </script>
 </body>
