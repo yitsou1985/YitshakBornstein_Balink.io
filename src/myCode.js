@@ -79,7 +79,7 @@ let weather = (function(){
 
         //Create the city name + state
         myFunctions.buildWeatherAreaName = function (data, WeatherNameData){
-            WeatherNameData.innerHTML = "<h1 id='payscss' ><b id='ville' >" + data.title + " , " + data.parent.title + "</b></h1>";
+            WeatherNameData.innerHTML = "<h1><b>" + data.title + " , " + data.parent.title + "</b></h1>";
         }
 
         /*here i'll create the 5-days weather forecast.
@@ -90,12 +90,12 @@ let weather = (function(){
         */
        myFunctions.buildWeatherForecast = function (data, weather){
            
-            let dataHTML = "<div class=\"row\">";
+            let dataHTML = "<div  class=\"row\">";
             let day = 0;
             for(let i in data.consolidated_weather){
-                dataHTML += "<div id='md2' class=\"col-md-2\">" +
-                    "<form class=\"form\" action=\"DayPage.html\">\n" +
-                    "  <input name=\"Day\" type=\"hidden\" value="+day +" '' >\n" +
+                dataHTML += "<div  class=\"col-md-2\" >" +
+                    "<form  class=\"form\" action=\"DayPage.html\">\n" +
+                    "  <input id='md2' name=\"Day\" type=\"hidden\" value="+day +" '' >\n" +
                     "  <input name=\"City\" type=\"hidden\" value="+data.woeid +" '' >\n" +
                     "  <input id='date' type=\"submit\"  value=" + data.consolidated_weather[i].applicable_date + ">\n" +
                     "</form>" +
@@ -119,7 +119,7 @@ let weather = (function(){
             let tempString = "";
             let PicName = data.weather_state_abbr;
             tempString +=
-            "<img src='https://www.metaweather.com/static/img/weather/" + PicName + ".svg' width=\"50\" height=\"50\">" +
+            "<img  src='https://www.metaweather.com/static/img/weather/" + PicName + ".svg' width=\"50\" height=\"50\">" +
                 data.weather_state_name + "<br>" +
             "<b>Max:</b>" +parseInt(data.max_temp) + "°C" + "<br>" +
             "<b>Min:</b>" +parseInt(data.min_temp) + "°C" +"<br>" +

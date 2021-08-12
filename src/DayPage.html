@@ -18,7 +18,7 @@
         
         <h2><a href="index.html">Back</a></h2>
         <div id="dayContent"> </div>
-        <h1 type="text" id="para" class="col-md-2" value="" > </h1>
+        <h1 type="text" id="para" class="col-md-2"> </h1>
     </div>
     
     <!-- <script src="dayScript.js"></script> -->
@@ -32,6 +32,24 @@ const localstor =localStorage.getItem('meteo','value')
     
  console.log (localstor)
 document.getElementById("para").innerHTML= localstor
+
+let incluinfo =  document.getElementsByClassName('col-md-2');
+for (let i=0; i<incluinfo.length;i++){
+console.log(incluinfo[i])
+console.log( document.querySelector('h1'));
+doc = document.querySelector('h1')
+doc.innerHTML
+
+
+localStorage.setItem('i',incluinfo[i])
+}
+
+console.log(document.getElementsByName('imeg') ); 
+
+
+
+
+
 
     </script>
 </body>
